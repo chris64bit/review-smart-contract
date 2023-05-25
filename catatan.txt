@@ -1,0 +1,4 @@
+{ "status": 200, "class": "shoulder", 
+"model": "vgg", "output": "positive", 
+"process_time": 30.052481499999885 }
+

@@ -16,7 +16,7 @@ $cek = mysqli_num_rows($data);
  
 // echo $cek['']
 if($cek > 0){
-	header("location:formanalisisbrosur.php?status=sukses");
+	header("location:formanalisisbrosur.php?status=sukses&page=brosur");
 }else{
-	header("location:formanalisisbrosur.php?status=gagal");
+	header("location:formanalisisbrosur.php?status=gagal&page=brosur");
 }

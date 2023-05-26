@@ -4,7 +4,7 @@ include("config.php");
 
 $db= $conn;
 $tableName="tblsmartcontract";
-$columns= ['nocontract', 'hash','flag','brosur'];
+$columns= ['nocontract', 'hash','flag','brosur','date'];
 $fetchData = fetch_data($db, $tableName, $columns);
 
 

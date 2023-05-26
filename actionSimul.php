@@ -1,22 +1,26 @@
 <?php
 include("config.php");
 
-$nama = $_POST['nama'];
+$tempdir = "solidity/";
 
-$data = mysqli_query($conn,"select hasil,COUNT(*) AS total from tblreview where nocontract='$nama' GROUP BY hasil");
+if (!file_exists($tempdir))
+    mkdir($tempdir, 0755);
 
-// menghitung jumlah data yang ditemukan
-$cek = mysqli_num_rows($data);
- 
-if($cek > 0){
-    $row1 = mysqli_fetch_assoc($data);
-    echo $row1['total']; // mengakses nilai kolom1 dari baris pertama
-    
-    // Mengambil data kedua
-    $row2 = mysqli_fetch_assoc($data);
-    echo $row2['total']; // mengakses nilai kolom1 dari baris kedua
 
-    header("location:formanalisislihat.php?page=lihat&data=".$nama."&".$row1['hasil']."=".$row1['total']."&".$row2['hasil']."=". $row2['total']."&status=sukses");
-}else{
-    header("location:formanalisislihat.php?page=lihat&status=gagal");
+$target_path = $tempdir . basename($_FILES['filegambar']['name']);
+
+$nama_gambar = $_FILES['filegambar']['name'];
+
+$ukuran_gambar = $_FILES['filegambar']['size'];
+
+if ($ukuran_gambar > 1000000000000000) {
+    echo 'Ukuran gambar melebihi 80kb';
+} else {
+    if (move_uploaded_file($_FILES['filegambar']['tmp_name'], $target_path)) {
+        echo 'Simpan data berhasil';
+        // Check for error in query
+        header("location:simulasi.php?page=lihat&mode=solidity&address=" . $nama_gambar);
+    } else {
+        echo 'Gagal';
+    }
 }

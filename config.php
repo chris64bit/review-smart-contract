@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 ini_set('display_errors', 1);
 
 function console_log($output, $with_script_tags = true)
@@ -88,8 +88,8 @@ if (!$conn) {
     function failedProgress() {
         Swal.fire({
             icon: 'error',
-            title: 'Opss!...',
-            text: 'Coba Analisa Ulang yaa..',
+            title: 'Gagal di Simpan',
+            text: 'Silahkan Coba Lagi',
             footer: '<a href="ui.ac.id">Universitas Indonesia</a>'
         })
     }

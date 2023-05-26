@@ -15,7 +15,10 @@ include("config.php");
                         <label for="floatingInput">Smart contract address</label>
                         <p class="text-danger">* Hash transaksi yang  telah anda lakukan sebagai bukti bahwa anda telah mencoba bertransaksi pada smart contract tersebut</p>
                     </div>
-                 
+                    <div style="margin-top: 20px;">
+                        <label class="form-label"><b>Upload Hasil Simulasi </b>(.txt)</label>
+                        <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" accept=".txt" >
+                    </div><br>
                     <div class="form-floating mb-3">
                         <select class="form-select" name="kondisi" id="floatingSelect" aria-label="Floating label select example">
                             <option selected>Select</option>

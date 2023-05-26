@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 ini_set('display_errors', 1);
 
 // function console_log($output, $with_script_tags = true)
@@ -90,6 +90,25 @@ if (!$conn) {
         Swal.fire({
             icon: 'error',
             title: 'Data tidak ditemukan',
+            text: 'Silahkan Coba Lagi',
+            footer: '<a href="ui.ac.id">Universitas Indonesia</a>'
+        })
+    }
+
+    
+    function successProgress() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Berhasil di Simpan',
+            text: 'Terima Kasih',
+            footer: '<a href="ui.ac.id">Universitas Indonesia</a>'
+        })
+    }
+
+    function failedProgress() {
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal di Simpan',
             text: 'Silahkan Coba Lagi',
             footer: '<a href="ui.ac.id">Universitas Indonesia</a>'
         })

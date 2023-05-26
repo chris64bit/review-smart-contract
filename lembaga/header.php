@@ -82,7 +82,7 @@
                 <div class="navbar-nav w-100">
                     <a href="formanalisislihat.php?page=lihat" class="nav-item nav-link <?php if ($_GET['page'] == "lihat") {
                                                                                             echo "active";
-                                                                                        } ?>"><i class="fa fa-star me-2"></i>Validator</a>
+                                                                                        } ?>"><i class="fa fa-check-square me-2"></i>Validator</a>
                 </div>
             </nav>
         </div>

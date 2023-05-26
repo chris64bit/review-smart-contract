@@ -18,8 +18,10 @@ $cek = mysqli_num_rows($data);
 if($cek > 0){
 	$_SESSION['email'] = $email;
 	$_SESSION['status'] = "login";
-	if($email=="pengguna2@gmail.com"){
-		header("location:lembaga/formanalisislihat.php?page=bone");
+	if($email=="lembaga@gmail.com"){
+		header("location:lembaga/formanalisislihat.php?page=lihat");
+	}else if($email=="publik@gmail.com"){
+		header("location:lembaga/formanalisislihatpublik.php?page=lihat");
 	}else{
 		header("location:formanalisislihat.php?page=bone");
 	}

@@ -24,11 +24,7 @@ include("config.php");
                     </div>
                     <div style="margin-top: 20px;">
                         <label class="form-label"><b>Upload File Brosur </b>(.pdf)</label>
-                        <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" onchange="onFileSelected(event)">
-                    </div>
-                    <div id="preview" hidden="hidden">
-                        <label class="form-label" style="margin-top: 10px;"><b>Preview Brosur</b></label> <br>
-                        <img id="myimage" height="200">
+                        <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" accept="application/pdf">
                     </div>
                     <div style="margin-top: 20px;">
                         <input class="btn btn-primary" onclick="progressLoad()" type="submit" name="submit" value="Cek Brosur">

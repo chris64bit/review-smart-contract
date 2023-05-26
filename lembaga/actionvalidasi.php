@@ -9,7 +9,7 @@ $data = mysqli_query($conn,"select * from tblsmartcontract where nocontract='$na
 $cek = mysqli_num_rows($data);
  
 if($cek > 0){
-    header("location:formanalisislihat.php?page=lihat&data=".$nama."&status=sukses");
+    header("location:formanalisislihatpublik.php?page=lihat&data=".$nama."&status=sukses");
 }else{
-    header("location:formanalisislihat.php?page=lihat&status=gagal");
+    header("location:formanalisislihatpublik.php?page=lihat&status=gagal");
 }

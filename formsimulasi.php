@@ -22,11 +22,11 @@ include("config.php");
                         <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" onchange="onFileSelected(event)">
                     </div>
                     <div id="preview" hidden="hidden">
-                        <label class="form-label" style="margin-top: 10px;"><b>Preview Brosur</b></label> <br>
+                        <label class="form-label" style="margin-top: 10px;"><b>Preview File Solidity</b></label> <br>
                         <img id="myimage" height="200">
                     </div>
                     <div style="margin-top: 20px;">
-                        <input class="btn btn-primary" type="submit" name="submit" value="Jalankan Simulasi dengan File Solidity">
+                        <input class="btn btn-primary" type="submit" name="submit" value="Jalankan Simulasi dengan File Solidity"><a href="simulasi.php">>>></a>
                     </div>
                 </div>
             </form>

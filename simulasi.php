@@ -6,6 +6,8 @@
       <?php
         $imagedata = file_get_contents("solidity/add3.sol");
         $base64 = base64_encode($imagedata);?>
+        <!---link simulasi dengan alamat SC http://localhost:8080/#address=0xdac17f958d2ee523a2206206994597c13d831ec7 
+        link simulasi dengan upload file solidity http://localhost:8080/?#code= --->
    </head>
 	
    <frameset framespacing="0" rows = "20%,80%">

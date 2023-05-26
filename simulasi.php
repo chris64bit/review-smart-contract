@@ -1,7 +1,7 @@
 <?php
 include("header.php");
 include("config.php");
-$imagedata = file_get_contents("solidity/add3.sol");
+$imagedata = file_get_contents("solidity/".$_GET['address']);
 $base64 = base64_encode($imagedata);
 ?>
 

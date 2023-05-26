@@ -19,7 +19,7 @@ if ($ukuran_gambar > 1000000000000000) {
     if (move_uploaded_file($_FILES['filegambar']['tmp_name'], $target_path)) {
         echo 'Simpan data berhasil';
         // Check for error in query
-        header("location:simulasi.php?page=lihat&mode=solidity&address=" . $nama_gambar);
+        header("location:simulasi.php?page=simulasi&mode=solidity&address=" . $nama_gambar);
     } else {
         echo 'Gagal';
     }

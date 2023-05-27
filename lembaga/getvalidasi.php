@@ -7,7 +7,6 @@ $tableName="tblsmartcontract";
 $columns= ['nocontract', 'hash','flag','brosur','date'];
 $fetchData = fetch_data($db, $tableName, $columns);
 
-
 function fetch_data($db, $tableName, $columns){
  if(empty($db)){
   $msg= "Database connection error";
@@ -20,10 +19,8 @@ function fetch_data($db, $tableName, $columns){
 $columnName = implode(", ", $columns);
 if($_GET['data']!= NULL){
    $id=$_GET['data'];
-   $query = "SELECT ".$columnName." FROM $tableName"." WHERE nocontract= ".$id."";
+   $result = mysqli_query($db,"select * from tblsmartcontract where nocontract='$id'");
 }
-
-$result = $db->query($query);
 
 if($result== true){ 
  if ($result->num_rows > 0) {
@@ -36,6 +33,7 @@ if($result== true){
   $msg= mysqli_error($db);
 }
 }
+echo $msg;
 return $msg;
 }
 ?>

@@ -1,3 +1,3 @@
 <?php
-echo hash_file('sha3-256', 'download/contoh-brosur.pdf');
+echo hash_file('sha3-256', 'download/brosur1.pdf');
 ?>

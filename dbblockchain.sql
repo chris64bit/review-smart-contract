@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0-rc1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Waktu pembuatan: 25 Bulan Mei 2023 pada 04.31
--- Versi server: 8.0.32
--- Versi PHP: 7.4.19
+-- Host: 127.0.0.1
+-- Generation Time: May 27, 2023 at 11:50 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,108 +24,115 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblreview`
+-- Table structure for table `tblreview`
 --
 
 CREATE TABLE `tblreview` (
-  `id` int NOT NULL,
-  `nocontract` text COLLATE utf8mb3_unicode_ci NOT NULL,
-  `hasil` int NOT NULL,
-  `komentar` text COLLATE utf8mb3_unicode_ci,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+  `id` int(11) NOT NULL,
+  `nocontract` text NOT NULL,
+  `hasil` int(11) NOT NULL,
+  `komentar` text DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `tblreview`
+-- Dumping data for table `tblreview`
 --
 
 INSERT INTO `tblreview` (`id`, `nocontract`, `hasil`, `komentar`, `timestamp`) VALUES
 (1, '1', 1, '463464', '2023-05-24 11:01:51'),
 (2, '1', 0, 'fjhfjhfjhfhf', '2023-05-24 12:31:01'),
 (3, '1', 0, 'sdads', '2023-05-24 12:44:07'),
-(4, '1', 1, 'cgchgcjhcjhcg', '2023-05-25 04:25:33');
+(4, '1', 1, 'cgchgcjhcjhcg', '2023-05-25 04:25:33'),
+(5, '', 0, 'xxvzxvx', '2023-05-26 09:41:51');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tblsmartcontract`
+-- Table structure for table `tblsmartcontract`
 --
 
 CREATE TABLE `tblsmartcontract` (
-  `nocontract` varchar(300) COLLATE utf8mb3_unicode_ci NOT NULL,
-  `hash` varchar(300) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `flag` varchar(300) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `brosur` text COLLATE utf8mb3_unicode_ci,
-  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+  `nocontract` varchar(300) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+  `date` varchar(40) NOT NULL,
+  `hash` varchar(300) NOT NULL,
+  `flag` varchar(300) NOT NULL,
+  `brosur` text DEFAULT NULL,
+  `datetime` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `tblsmartcontract`
+-- Dumping data for table `tblsmartcontract`
 --
 
-INSERT INTO `tblsmartcontract` (`nocontract`, `hash`, `flag`, `brosur`, `datetime`) VALUES
-('1', '1', '1', 'sbfkbaslkdfbdaksjbfdjfjasbdjflbalsdjfbads', '2023-05-24 11:26:49');
+INSERT INTO `tblsmartcontract` (`nocontract`, `date`, `hash`, `flag`, `brosur`, `datetime`) VALUES
+('0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86', '2022-12-23', '33e9f70c65177a128dd7dce09bd78bd79f784b07225cc6ce08ac2044494156d1', '0xf471319166c06a71c89d8b404d91d4736cd353876c7899b7d5624e089b311e7f', 'contoh-brosur.pdf', '2023-05-27 09:43:47'),
+('1', '12 Desember 2022', '1', '1', 'brosur1.pdf', '2023-05-24 11:26:49'),
+('10', '2023-05-15', '1', '1', '', '2023-05-26 13:00:26'),
+('100', '2023-05-10', 'qwrwq', 'rqwrqwr', 'GSM Logo BRIN.pdf', '2023-05-26 13:10:38'),
+('2', '2023-05-15', '3', '4', 'tes', '2023-05-26 12:57:17');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-  `usersID` int NOT NULL,
+  `usersID` int(11) NOT NULL,
   `name` varchar(40) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `lastLogin` datetime NOT NULL,
-  `createTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `createTime` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`usersID`, `name`, `email`, `password`, `lastLogin`, `createTime`) VALUES
-(1, 'admin', 'admin@gmail.com', '123123', '2022-08-04 00:00:00', '2022-08-28 07:59:55'),
-(2, 'superuser', 'superuser@gmail.com', '123123', '2023-05-24 13:54:00', '2023-05-24 13:54:12');
+(1, 'pengguna', 'pengguna@gmail.com', '123123', '2022-08-04 00:00:00', '2022-08-28 07:59:55'),
+(2, 'lembaga', 'lembaga@gmail.com', '123123', '2023-05-24 13:54:00', '2023-05-24 13:54:12'),
+(3, 'publik', 'publik@gmail.com', '123123', '2023-05-26 12:00:03', '2023-05-26 12:00:17');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tblreview`
+-- Indexes for table `tblreview`
 --
 ALTER TABLE `tblreview`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tblsmartcontract`
+-- Indexes for table `tblsmartcontract`
 --
 ALTER TABLE `tblsmartcontract`
   ADD PRIMARY KEY (`nocontract`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`usersID`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tblreview`
+-- AUTO_INCREMENT for table `tblreview`
 --
 ALTER TABLE `tblreview`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `usersID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `usersID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

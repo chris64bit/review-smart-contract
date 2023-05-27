@@ -22,7 +22,7 @@
         } 
         else {
             $_SESSION['pesan'] = "Oops! File - $filename - not found ...";
-            header("location:formanalisislihatpublik.php");
+            header("location:formanalisislihatpublik.php?page=simulasi");
         }
     }
 ?>

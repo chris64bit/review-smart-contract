@@ -33,7 +33,7 @@ if($result== true){
   $msg= mysqli_error($db);
 }
 }
-echo $msg;
+//echo $msg;
 return $msg;
 }
 ?>

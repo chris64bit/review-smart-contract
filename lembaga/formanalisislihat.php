@@ -19,11 +19,11 @@ include("config.php");
                         <label for="floatingInput">Tanggal Upgrade</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="hash" id="floatingInput" placeholder="Faizurrahman Allam">
+                        <input type="text" class="form-control" name="flag" id="floatingInput" placeholder="Faizurrahman Allam">
                         <label for="floatingInput">Flag Hash</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="flag" id="floatingInput" placeholder="Faizurrahman Allam">
+                        <input type="text" class="form-control" name="hash" id="floatingInput" placeholder="Faizurrahman Allam">
                         <label for="floatingInput">Hash Transaksi</label>
                     </div>
                     <div style="margin-top: 20px;">

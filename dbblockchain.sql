@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2023 at 11:50 AM
+-- Generation Time: May 28, 2023 at 11:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -66,7 +66,7 @@ CREATE TABLE `tblsmartcontract` (
 --
 
 INSERT INTO `tblsmartcontract` (`nocontract`, `date`, `hash`, `flag`, `brosur`, `datetime`) VALUES
-('0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86', '2022-12-23', '33e9f70c65177a128dd7dce09bd78bd79f784b07225cc6ce08ac2044494156d1', '0xf471319166c06a71c89d8b404d91d4736cd353876c7899b7d5624e089b311e7f', 'contoh-brosur.pdf', '2023-05-27 09:43:47'),
+('0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86', '2022-12-23', '0xf471319166c06a71c89d8b404d91d4736cd353876c7899b7d5624e089b311e7f', '33e9f70c65177a128dd7dce09bd78bd79f784b07225cc6ce08ac2044494156d1', 'contoh-brosur.pdf', '2023-05-28 09:05:08'),
 ('1', '12 Desember 2022', '1', '1', 'brosur1.pdf', '2023-05-24 11:26:49'),
 ('10', '2023-05-15', '1', '1', '', '2023-05-26 13:00:26'),
 ('100', '2023-05-10', 'qwrwq', 'rqwrqwr', 'GSM Logo BRIN.pdf', '2023-05-26 13:10:38'),

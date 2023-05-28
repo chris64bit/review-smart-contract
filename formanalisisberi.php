@@ -13,11 +13,11 @@ include("config.php");
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="nama" id="floatingInput" placeholder="Faizurrahman Allam">
                         <label for="floatingInput">Smart contract address</label>
-                        <p class="text-danger">* Hash transaksi yang  telah anda lakukan sebagai bukti bahwa anda telah mencoba bertransaksi pada smart contract tersebut</p>
                     </div>
                     <div style="margin-top: 20px;">
                         <label class="form-label"><b>Upload Hasil Simulasi </b>(scenario.json)</label>
-                        <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" accept=".txt" >
+                        <p class="text-danger">* File rekaman simulasi yang  telah anda lakukan sebagai bukti bahwa anda telah melakukan simulasi.</p>
+                        <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" accept=".json" >
                     </div><br>
                     <div class="form-floating mb-3">
                         <select class="form-select" name="kondisi" id="floatingSelect" aria-label="Floating label select example">

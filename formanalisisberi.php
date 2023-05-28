@@ -16,7 +16,7 @@ include("config.php");
                         <p class="text-danger">* Hash transaksi yang  telah anda lakukan sebagai bukti bahwa anda telah mencoba bertransaksi pada smart contract tersebut</p>
                     </div>
                     <div style="margin-top: 20px;">
-                        <label class="form-label"><b>Upload Hasil Simulasi </b>(.txt)</label>
+                        <label class="form-label"><b>Upload Hasil Simulasi </b>(scenario.json)</label>
                         <input class="form-control form-control-lg" id="formFileLg" name="image" type="file" accept=".txt" >
                     </div><br>
                     <div class="form-floating mb-3">

@@ -117,6 +117,7 @@ if (!$conn) {
         Swal.fire({
             icon: 'success',
             title: 'Hasil Review',
+            //text: '<img src="img/check.png" height="50px" width="50px">Terpercaya:'+on+' ||| <img src="img/forbidden.png" height="50px" width="50px"> Meragukan/Berbahaya:'+off,
             text: 'Terpercaya:'+on+' |||  Meragukan/Berbahaya:'+off,
             footer: '<a href="detail.php?page=lihat&data='+data+'">Lihat Detail</a>'
         })

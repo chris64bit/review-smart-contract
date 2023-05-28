@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 11:13 AM
+-- Generation Time: May 28, 2023 at 05:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tblreview` (
   `id` int(11) NOT NULL,
-  `nocontract` text NOT NULL,
+  `nocontract` text CHARACTER SET armscii8 COLLATE armscii8_general_ci NOT NULL,
   `hasil` int(11) NOT NULL,
   `komentar` text DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
@@ -40,11 +40,11 @@ CREATE TABLE `tblreview` (
 --
 
 INSERT INTO `tblreview` (`id`, `nocontract`, `hasil`, `komentar`, `timestamp`) VALUES
-(1, '1', 1, '463464', '2023-05-24 11:01:51'),
-(2, '1', 0, 'fjhfjhfjhfhf', '2023-05-24 12:31:01'),
-(3, '1', 0, 'sdads', '2023-05-24 12:44:07'),
-(4, '1', 1, 'cgchgcjhcjhcg', '2023-05-25 04:25:33'),
-(5, '', 0, 'xxvzxvx', '2023-05-26 09:41:51');
+(1, '1', 1, 'Semua fungsi dapat sudah dicoba dan aman.', '2023-05-24 11:01:51'),
+(2, '1', 1, 'fungsi aman.', '2023-05-24 12:31:01'),
+(3, '1', 1, 'Setelah dites aman.', '2023-05-24 12:44:07'),
+(4, '1', 1, 'Dari hasil simulasi aman.', '2023-05-25 04:25:33'),
+(6, '0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86', 1, 'Fungsi telah dilakukan tes pada simulasi dan sesuai dengan brosur.', '2023-05-28 15:25:22');
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tblreview`
 --
 ALTER TABLE `tblreview`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

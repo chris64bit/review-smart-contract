@@ -19,10 +19,8 @@ function fetch_data($db, $tableName, $columns){
 $columnName = implode(", ", $columns);
 if($_GET['data']!= NULL){
    $id=$_GET['data'];
-   $query = "SELECT ".$columnName." FROM $tableName"." WHERE nocontract= ".$id."";
+   $result = mysqli_query($db,"select * from tblreview where nocontract='$id'");
 }
-
-$result = $db->query($query);
 
 if($result== true){ 
  if ($result->num_rows > 0) {

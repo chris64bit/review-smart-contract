@@ -30,7 +30,7 @@ include("config.php");
                     <p><b>Memuaskan : </b></p>
                     <p><b>Meragukan/Berbahaya : </b></p>
                     <div style="margin-top: 20px;">
-                        <a class="btn btn-success" href="detail.php" role="button">More Detail</a>
+                        <a class="btn btn-success" href="detail.php?data=<?php echo '0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86'?>" role="button">More Detail</a>
                     </div>
                 </div>
             <?php
@@ -47,12 +47,16 @@ include("config.php");
 include("footer.php");
 
 if ($_GET['status'] == 'sukses') {
+
     if($_GET['0'] == NULL){
-        echo '<script> successProgress_lihat('.$_GET['1'].',0,'.$_GET['data'].')</script>';
+        $data = $_GET['data'];
+        // $data = substr($data, 2);
+        // console_log($data);
+        echo '<script> successProgress_lihat('.$_GET['1'].',0,'.'"'.$data.'"'.')</script>';
     }elseif($_GET['1'] == NULL){
-        echo '<script> successProgress_lihat(0,'.$_GET['0'].','.$_GET['data'].')</script>';
+        echo '<script> successProgress_lihat(0,'.$_GET['0'].','.'"'.$data.'"'.')</script>';
     }else{
-        echo '<script> successProgress_lihat('.$_GET['1'].','.$_GET['0'].','.$_GET['data'].')</script>';
+        echo '<script> successProgress_lihat('.$_GET['1'].','.$_GET['0'].','.'"'.$data.'"'.')</script>';
     }
    
 } elseif ($_GET['status'] == 'gagal') {

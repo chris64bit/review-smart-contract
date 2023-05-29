@@ -13,6 +13,7 @@ include("config.php");
                     <div class="form-floating mb-3">
                         <input type="text" name="nama" class="form-control" id="floatingInput" placeholder="Faizurrahman Allam">
                         <label for="floatingInput">Smart Contract Address</label>
+                        <p class="text-danger">* Contoh: 0x9C818e93C0884f75f48d93a9BDB2E994f8d77b86</p>
                     </div>
                     <div style="margin-top: 20px;">
                         <input class="btn btn-primary" onclick="progressLoad()" type="submit" name="submit" value="Periksa Smart Contract">

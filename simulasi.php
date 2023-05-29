@@ -44,9 +44,9 @@ $base64 = base64_encode($imagedata);
    <Button type="button" data-toggle="modal" data-target="#settings" class="btn btn-danger">Tata Cara Penggunaan</Button>
    <br><br>
    <?php if ($_GET['mode'] == 'text') { ?>
-      <iframe id="dip" src="http://localhost:8081/#address=<?php echo $_GET['address'] ?>" name="thumbnails" frameborder="0">
+      <iframe id="dip" src="http://localhost:8080/#address=<?php echo $_GET['address'] ?>" name="thumbnails" frameborder="0">
       <?php } else { ?>
-         <iframe id="dip" src="http://127.0.0.1:8081/?#code=<?php echo $base64 ?>" name="thumbnails" frameborder="0">
+         <iframe id="dip" src="http://127.0.0.1:8080/?#code=<?php echo $base64 ?>" name="thumbnails" frameborder="0">
 
          <?php } ?>
 </div>
